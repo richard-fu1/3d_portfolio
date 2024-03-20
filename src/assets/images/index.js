@@ -1,15 +1,7 @@
-import hero from './hero.jpg'
-import meta from './meta.png'
-import shopify from './shopify.png'
-import starbucks from './starbucks.png'
-import tesla from './tesla.png'
 import logo from './logo.svg'
+import ballys from './ballysinteractive.png'
+import jamlabs from './jamlabs.png'
+import svs from './svs.png'
+import cooperators from './cooperators.png'
 
-export {
-    hero,
-    meta,
-    shopify,
-    starbucks,
-    tesla,
-    logo
-}
+export { logo, ballys, jamlabs, svs, cooperators }

@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from '../assets/images'
+import { ballys, jamlabs, svs, cooperators } from '../assets/images'
 import {
   car,
   contact,
@@ -57,16 +57,11 @@ export const skills = [
     name: 'JavaScript',
     type: 'Frontend',
   },
-  {
-    imageUrl: mongodb,
-    name: 'MongoDB',
-    type: 'Database',
-  },
-  {
-    imageUrl: motion,
-    name: 'Motion',
-    type: 'Animation',
-  },
+  // {
+  //   imageUrl: mongodb,
+  //   name: 'MongoDB',
+  //   type: 'Database',
+  // },
   {
     imageUrl: mui,
     name: 'Material-UI',
@@ -92,16 +87,11 @@ export const skills = [
     name: 'Redux',
     type: 'State Management',
   },
-  {
-    imageUrl: sass,
-    name: 'Sass',
-    type: 'Frontend',
-  },
-  {
-    imageUrl: tailwindcss,
-    name: 'Tailwind CSS',
-    type: 'Frontend',
-  },
+  // {
+  //   imageUrl: tailwindcss,
+  //   name: 'Tailwind CSS',
+  //   type: 'Frontend',
+  // },
   {
     imageUrl: typescript,
     name: 'TypeScript',
@@ -111,55 +101,60 @@ export const skills = [
 
 export const experiences = [
   {
-    title: 'React.js Developer',
-    company_name: 'Starbucks',
-    icon: starbucks,
+    title: 'Full Stack Software Developer',
+    company_name: "Bally's Interactive",
+    icon: ballys,
     iconBg: '#accbe1',
-    date: 'March 2020 - April 2021',
+    date: 'January 2022 - October 2023',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Improved infrastructure across different microservices to expand the application to new regions, saving the company weeks in production time and resources.',
+      'Identifed bugs by monitoring existing services using Splunk and Dynatrace, ensuring steady performance and reliability.',
+      'Troubleshot and resolved issues by tracing through applications developed using React, Spring, Docker, and Kubernetes, ensuring stable and expected functionality in new regions.',
+      'Aided in improving CI/CD processes using GoCD and Ansible, contributing to efficient software delivery.',
+      'Collaborated with teams from different technical areas to provide seamless application integration.',
+      'Designed and architected an automation application using Spring to improve efficiency and reduce errors.',
     ],
   },
   {
-    title: 'React Native Developer',
-    company_name: 'Tesla',
-    icon: tesla,
+    title: 'Full Stack Software Engineer',
+    company_name: 'Jamlabs Data Science',
+    icon: jamlabs,
     iconBg: '#fbc3bc',
-    date: 'Jan 2021 - Feb 2022',
+    date: 'May 2021 - August 2021',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Refactored back-end Express codebase to standardize error handling and simplify debugging.',
+      'Utilized functional components in React and Redux Hooks to create front-end features for users.',
+      'Implemented automated front and back end testing suites using Jest to ensure code quality.',
+      'Used a variety of AWS services, including DynamoDB, to manage application data.',
+      'Collaborated in a team of three to complete assigned sprint tasks with little management oversight.',
     ],
   },
   {
-    title: 'Web Developer',
-    company_name: 'Shopify',
-    icon: shopify,
+    title: 'Full Stack Developer',
+    company_name: 'Sky View Suites',
+    icon: svs,
     iconBg: '#b7e4c7',
-    date: 'Jan 2022 - Jan 2023',
+    date: 'May 2020 - August 2020',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Streamlined invoice creation to generate tens of thousands of invoices early, reducing human error by 85%',
+      'Updated authorization system utilizing open source PHP solution to ensure product security.',
+      'Implemented a testing suite using PHPUnit to facilitate automatic unit testing on build.',
+      'Leveraged templating in Vue.js to create front-end dashboards for various teams.',
+      'Collaborated with developers to design, architect, and develop new system features.',
     ],
   },
   {
     title: 'Full stack Developer',
-    company_name: 'Meta',
-    icon: meta,
+    company_name: 'Co-operators',
+    icon: cooperators,
     iconBg: '#a2d2ff',
-    date: 'Jan 2023 - Present',
+    date: 'January 2020 - April 2020',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Created a web manual to give insurance brokers up-to-date information on company specific terminology and best practices.',
+      'Implemented front-end functionality with React and used Redux for state management.',
+      'Designed and developed a web server and database using Express and MongoDB.',
+      'Utilized Jest, Jasmine, Mocha and Chai to create an automated unit testing suite.',
+      "Produced end of sprint demo videos to show the current sprint's progress to clients.",
     ],
   },
 ]
@@ -173,62 +168,37 @@ export const socialLinks = [
   {
     name: 'GitHub',
     iconUrl: github,
-    link: 'https://github.com/YourGitHubUsername',
+    link: 'https://github.com/richard-fu1',
   },
   {
     name: 'LinkedIn',
     iconUrl: linkedin,
-    link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+    link: 'https://www.linkedin.com/in/rui-qi-fu/',
   },
 ]
 
 export const projects = [
   {
-    iconUrl: pricewise,
+    iconUrl: null,
     theme: 'btn-back-red',
-    name: 'Amazon Price Tracker',
+    name: '3D Portfolio',
     description:
-      'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-    link: 'https://github.com/adrianhajdin/pricewise',
+      'The source code for the current portfolio! Written using React and using Three.js and Tailwind CSS packages.',
+    link: 'https://github.com/richard-fu1/3d_portfolio',
   },
   {
-    iconUrl: threads,
+    iconUrl: null,
     theme: 'btn-back-green',
-    name: 'Full Stack Threads Clone',
+    name: 'Asteroids GA',
     description:
-      'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: 'https://github.com/adrianhajdin/threads',
+      'An HTML + Javascript version of the classic Asteroids game, with the ability to train a neural network using genetic algorithms.',
+    link: 'https://github.com/richard-fu1/asteroidsGA',
   },
   {
-    iconUrl: car,
+    iconUrl: null,
     theme: 'btn-back-blue',
-    name: 'Car Finding App',
-    description:
-      'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-    link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
-  },
-  {
-    iconUrl: snapgram,
-    theme: 'btn-back-pink',
-    name: 'Full Stack Instagram Clone',
-    description:
-      'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-    link: 'https://github.com/adrianhajdin/social_media_app',
-  },
-  {
-    iconUrl: estate,
-    theme: 'btn-back-black',
-    name: 'Real-Estate Application',
-    description:
-      'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-    link: 'https://github.com/adrianhajdin/projects_realestate',
-  },
-  {
-    iconUrl: summiz,
-    theme: 'btn-back-yellow',
-    name: 'AI Summarizer Application',
-    description:
-      'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-    link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+    name: 'Front-end Reddit clone',
+    description: 'Created a front-end reddit clone using Next.js and Firebase,',
+    link: 'https://github.com/richard-fu1/reddit-clone-nextjs-practice',
   },
 ]
