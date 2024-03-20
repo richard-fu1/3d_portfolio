@@ -57,11 +57,11 @@ export const skills = [
     name: 'JavaScript',
     type: 'Frontend',
   },
-  // {
-  //   imageUrl: mongodb,
-  //   name: 'MongoDB',
-  //   type: 'Database',
-  // },
+  {
+    imageUrl: mongodb,
+    name: 'MongoDB',
+    type: 'Database',
+  },
   {
     imageUrl: mui,
     name: 'Material-UI',
@@ -87,11 +87,11 @@ export const skills = [
     name: 'Redux',
     type: 'State Management',
   },
-  // {
-  //   imageUrl: tailwindcss,
-  //   name: 'Tailwind CSS',
-  //   type: 'Frontend',
-  // },
+  {
+    imageUrl: tailwindcss,
+    name: 'Tailwind CSS',
+    type: 'Frontend',
+  },
   {
     imageUrl: typescript,
     name: 'TypeScript',
