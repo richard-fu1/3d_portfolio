@@ -77,6 +77,50 @@ body:has(.card[data-color="green"]:hover) {
   .cta-text {
     @apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
   }
+
+  .contact-buttons {
+    @apply flex pt-5 pb-5 gap-6
+  }
+
+  .github-button {
+    @apply mb-2 inline-block rounded bg-[#333] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out
+  }
+  .github-button:hover{
+    @apply shadow-lg
+  }
+  .github-button:focus {
+    @apply shadow-lg outline-none ring-0
+  }
+  .github-button:active {
+    @apply shadow-lg
+  }
+
+  .linkedin-button {
+    @apply mb-2 inline-block rounded bg-[#0077b5] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out
+  }
+  .linkedin-button:hover {
+    @apply shadow-lg
+  }
+  .linkedin-button:focus {
+    @apply shadow-lg outline-none ring-0
+  }
+  .linkedin-button:active {
+    @apply shadow-lg
+  }
+
+  .email-button {
+    @apply mb-2 inline-block rounded bg-[#808080] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out
+  }
+  .email-button:hover {
+    @apply shadow-lg
+  }
+  .email-button:focus {
+    @apply shadow-lg outline-none ring-0
+  }
+  .email-button:active {
+    @apply shadow-lg
+  }
+
 }
 
 .glassmorphism {

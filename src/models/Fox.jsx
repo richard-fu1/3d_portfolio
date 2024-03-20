@@ -19,6 +19,9 @@ const Fox = ({ currentAnimation, ...props }) => {
   useEffect(() => {
     Object.values(actions).forEach((action) => action.stop())
     if (actions[currentAnimation]) {
+      if (currentAnimation === 'walk' || currentAnimation === 'hit') {
+        actions[currentAnimation].timeScale = 2.5
+      }
       actions[currentAnimation].play()
     }
   }, [actions, currentAnimation])

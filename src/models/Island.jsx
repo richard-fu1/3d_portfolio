@@ -139,12 +139,16 @@ const Island = ({ isRotating, setIsRotating, setCurStage, ...props }) => {
     const canvas = gl.domElement
     canvas.addEventListener('pointerdown', handlePointerDown)
     canvas.addEventListener('pointerup', handlePointerUp)
+    canvas.addEventListener('touchstart', handlePointerDown)
+    canvas.addEventListener('touchend', handlePointerUp)
     canvas.addEventListener('pointermove', handlePointerMove)
     document.addEventListener('keydown', handleKeyDown)
     document.addEventListener('keyup', handleKeyUp)
     return () => {
       canvas.removeEventListener('pointerdown', handlePointerDown)
       canvas.removeEventListener('pointerup', handlePointerUp)
+      canvas.removeEventListener('touchstart', handlePointerDown)
+      canvas.removeEventListener('touchend', handlePointerUp)
       canvas.removeEventListener('pointermove', handlePointerMove)
       document.removeEventListener('keydown', handleKeyDown)
       document.removeEventListener('keyup', handleKeyUp)

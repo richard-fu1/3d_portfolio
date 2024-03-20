@@ -159,24 +159,6 @@ export const experiences = [
   },
 ]
 
-export const socialLinks = [
-  {
-    name: 'Contact',
-    iconUrl: contact,
-    link: '/contact',
-  },
-  {
-    name: 'GitHub',
-    iconUrl: github,
-    link: 'https://github.com/richard-fu1',
-  },
-  {
-    name: 'LinkedIn',
-    iconUrl: linkedin,
-    link: 'https://www.linkedin.com/in/rui-qi-fu/',
-  },
-]
-
 export const projects = [
   {
     iconUrl: null,

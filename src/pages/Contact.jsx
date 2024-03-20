@@ -6,6 +6,8 @@ import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
 import useAlert from '../hooks/useAlert'
 import Alert from '../components/Alert'
+import { emailcta, githubcta, linkedincta } from '../assets/icons'
+import CTAButton from '../components/CTAButton'
 
 const Contact = () => {
   const formRef = useRef(null)
@@ -64,8 +66,33 @@ const Contact = () => {
       {alert.show && <Alert {...alert} />}
       <div className='flex-1 min-w-[50%] flex flex-col'>
         <h1 className='head-text'>Get in touch</h1>
+        <h2 className='pt-2'>Reach me at the following links:</h2>
+        <div className='contact-buttons'>
+          <CTAButton
+            className={'github-button'}
+            foxRun={handleFocus}
+            foxStop={handleBlur}
+            svg={githubcta}
+            linkTo={import.meta.env.VITE_APP_GITHUB}
+          />
+          <CTAButton
+            className={'linkedin-button'}
+            foxRun={handleFocus}
+            foxStop={handleBlur}
+            svg={linkedincta}
+            linkTo={import.meta.env.VITE_APP_LINKEDIN}
+          />
+          <CTAButton
+            className={'email-button'}
+            foxRun={handleFocus}
+            foxStop={handleBlur}
+            svg={emailcta}
+            linkTo={`mailto:${import.meta.env.VITE_APP_PERSONAL_EMAIL}`}
+          />
+        </div>
+        <h2>Or send me an email directly:</h2>
         <form
-          className='w-full flex flex-col gap-7 mt-14'
+          className='w-full flex flex-col gap-7 mt-5'
           onSubmit={handleSubmit}
           ref={formRef}
         >
