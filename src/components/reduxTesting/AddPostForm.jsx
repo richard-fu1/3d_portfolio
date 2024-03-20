@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { postAdded } from '../../features/postsSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectAllUsers } from '../../features/usersSlice'
 
 const AddPostForm = () => {
   const [form, setForm] = useState({ title: '', content: '', user: '' })
+  const [canSave, setCanSave] = useState(false)
   const users = useSelector(selectAllUsers)
   const onFormChange = (e) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
@@ -17,6 +18,10 @@ const AddPostForm = () => {
       setForm({ title: '', content: '', user: '' })
     }
   }
+
+  useEffect(() => {
+    setCanSave(Boolean(form.title && form.content && form.user))
+  }, [form])
 
   return (
     <section>
@@ -32,6 +37,7 @@ const AddPostForm = () => {
             value={form.title}
             onChange={onFormChange}
             placeholder='Title'
+            required
           />
         </label>
         <label htmlFor='postAuthor' className='text-gray-500'>
@@ -40,8 +46,9 @@ const AddPostForm = () => {
             value={form.user}
             onChange={onFormChange}
             placeholder='test'
+            required
           >
-            <option value='' disabled selected>
+            <option value='' disabled>
               Author
             </option>
             {users.map((user) => (
@@ -59,9 +66,14 @@ const AddPostForm = () => {
             value={form.content}
             onChange={onFormChange}
             placeholder='Content'
+            required
           />
         </label>
-        <button type='submit' className='btn mt-5'>
+        <button
+          type='submit'
+          className={`${canSave ? 'btn' : 'disabled-btn'} mt-5`}
+          disabled={!canSave}
+        >
           Save Post
         </button>
       </form>
