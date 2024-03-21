@@ -19,6 +19,9 @@ const Home = () => {
   const [curStage, setCurStage] = useState(1)
   const [isPlayingMusic, setIsPlayingMusic] = useState(false)
 
+  const [scrollRotate, setScrollRotate] = useState(false)
+  const setRotatingTimeout = useRef(null)
+
   useEffect(() => {
     const curAudioRef = audioRef.current
     if (isPlayingMusic) {
@@ -28,6 +31,14 @@ const Home = () => {
       curAudioRef.pause()
     }
   }, [isPlayingMusic])
+
+  useEffect(() => {
+    if (scrollRotate) {
+      setRotatingTimeout.current = setTimeout(() => {
+        if (scrollRotate) setScrollRotate(false)
+      }, 500)
+    }
+  }, [scrollRotate, setScrollRotate])
 
   const adjustIslandForScreenSize = () => {
     let screenScale = window.innerWidth < 768 ? [0.9, 0.9, 0.9] : [1, 1, 1]
@@ -52,8 +63,8 @@ const Home = () => {
       </div>
       <div className='absolute bottom-20 left-10 right-10 z-10 flex items-center justify-center opacity-25 hover:opacity-100'>
         <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5'>
-          Drag or use left and right arrow keys to see other sections of the
-          island!
+          Drag, scroll, or use left and right arrow keys to see other sections
+          of the island!
         </h1>
       </div>
       <Canvas
@@ -69,7 +80,7 @@ const Home = () => {
             intensity={1}
           />
           <Bird />
-          <Sky isRotating={isRotating} />
+          <Sky isRotating={isRotating || scrollRotate} />
           <Island
             position={islandPosition}
             scale={islandScale}
@@ -77,12 +88,13 @@ const Home = () => {
             isRotating={isRotating}
             setIsRotating={setIsRotating}
             setCurStage={setCurStage}
+            setScrollRotate={setScrollRotate}
           />
           <Plane
             scale={planeScale}
             planePosition={planePosition}
             rotation={[0, 20, 0]}
-            isRotating={isRotating}
+            isRotating={isRotating || scrollRotate}
           />
         </Suspense>
       </Canvas>

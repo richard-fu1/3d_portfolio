@@ -20,7 +20,7 @@ const renderContent = {
   ),
   2: (
     <InfoBox
-      text='Looking to explore various software developement topics and opportunities'
+      text='Looking to explore various software developement topics and opportunities.'
       link='/about'
       btnText='Learn more'
     />
